@@ -50,6 +50,7 @@
 		transition: all ease-in .3s;
 		position: relative;
 		width: 100%;
+		z-index: 2;
 
 		&:before{
 			-webkit-clip-path: polygon(0 50%, 100% 0, 100% 50%, 0 100%);
@@ -78,6 +79,16 @@
 		z-index: 1;
 	}
 
+	.backcover{
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		-webkit-filter: grayscale(100%);
+		-webkit-transition: all ease-in .1s;
+		transition: all ease-in .1s;
+	}
+
 	&:hover{
 		text-decoration: none;
 		margin-top: -5px;
@@ -91,6 +102,10 @@
 			color: $charcoal;
 			background: $bee_yellow;
 			border: 1px solid $bee_yellow;
+		}
+
+		.backcover {
+			-webkit-filter: grayscale(0%);
 		}
 	}
 }
